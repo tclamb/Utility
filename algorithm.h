@@ -1,6 +1,9 @@
+#ifndef _Utility_algorithm_h_
+#define _Utility_algorithm_h_
+
 #include <iterator>  //for std::prev, std::next
 
-// expects function of type: fn(Iterator current, Iterator previous, Iterator next)
+// expects function of type: fn(Iterator_type current, Iterator_type previous, Iterator_type next)
 // iterators must have std::next() and std::prev() specializations
 template<class InputIterator, class Function>
 Function FB_for_each(InputIterator first, InputIterator last, Function fn) {
@@ -25,3 +28,5 @@ Function FB_for_each(InputIterator first, InputIterator last, Function fn) {
     
     return fn;
 }
+
+#endif
